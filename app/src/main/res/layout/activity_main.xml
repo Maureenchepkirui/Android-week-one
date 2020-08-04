@@ -21,11 +21,13 @@
         android:layout_centerHorizontal="true"
         android:textStyle="bold" />
     <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:text="LIBRARY"
+        android:id="@+id/findRestaurantsButton"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:background="@color/colorAccent"
-        android:text="View Books" />
+        android:textSize="30sp"
+        android:textColor="@color/colorTextIcons" />
 </RelativeLayout>
