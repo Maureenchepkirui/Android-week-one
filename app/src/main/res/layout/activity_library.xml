@@ -10,5 +10,15 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:background="#FFFFFF" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="GENRES"
+        android:id="@+id/genresButton"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@color/colorAccent"
+        android:textSize="30sp"
+        android:textColor="@color/colorTextIcons" />
 </RelativeLayout>
 
