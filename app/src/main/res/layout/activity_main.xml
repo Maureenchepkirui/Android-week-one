@@ -10,24 +10,27 @@
         android:src="@drawable/book1" />
 
     <TextView
+        android:id="@+id/appNameTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="BOOKHUB"
-        android:layout_marginTop="35dp"
-        android:id="@+id/appNameTextView"
-        android:textColor="@color/colorTextIcons"
-        android:textSize="40sp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="35dp"
+        android:fontFamily="@font/asset"
+        android:text="BOOKHUB"
+        android:textColor="@color/colorPrimaryLight"
+        android:textSize="30sp"
         android:textStyle="bold" />
+
     <Button
+        android:id="@+id/libraryButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="LIBRARY"
-        android:id="@+id/libraryButton"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:background="@color/colorAccent"
-        android:textSize="30sp"
-        android:textColor="@color/colorTextIcons" />
+        android:background="@color/colorPrimary"
+        android:fontFamily="@font/faster_one"
+        android:text="LIBRARY"
+        android:textColor="@color/colorAccent"
+        android:textSize="30sp" />
 </RelativeLayout>
