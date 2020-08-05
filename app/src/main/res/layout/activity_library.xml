@@ -2,23 +2,30 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent" android:layout_height="match_parent">
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/lib" />
 
     <ListView
         android:id="@+id/listView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:background="#FFFFFF" />
+        android:layout_alignParentRight="true" />
+
     <Button
+        android:id="@+id/genresButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="GENRES"
-        android:id="@+id/genresButton"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:background="@color/colorAccent"
-        android:textSize="30sp"
-        android:textColor="@color/colorTextIcons" />
+        android:fontFamily="@font/faster_one"
+        android:text="GENRES"
+        android:textColor="@color/colorTextIcons"
+        android:textSize="30sp" />
 </RelativeLayout>
 
