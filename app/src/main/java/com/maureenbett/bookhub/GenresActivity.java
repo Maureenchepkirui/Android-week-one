@@ -3,6 +3,7 @@ package com.maureenbett.bookhub;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -30,7 +31,7 @@ public class GenresActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_genres);
         ButterKnife.bind(this);
-        ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, genres);
+        ArrayAdapter adapter = new ArrayAdapter(this,R.layout.row, genres);
         mListView.setAdapter(adapter);
         Intent intent = getIntent();
         mreadingListButton = (Button) findViewById(R.id.readingListButton);

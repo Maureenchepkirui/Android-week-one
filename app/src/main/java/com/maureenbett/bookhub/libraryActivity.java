@@ -30,7 +30,7 @@ public class libraryActivity extends AppCompatActivity {
 
         ButterKnife.bind(this);
 
-        ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, novels);
+        ArrayAdapter adapter = new ArrayAdapter(this, R.layout.row2, novels);
         mListView.setAdapter(adapter);
 
         Intent intent = getIntent();
