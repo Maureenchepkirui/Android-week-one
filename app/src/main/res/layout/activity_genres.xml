@@ -7,9 +7,13 @@
         android:id="@+id/listView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:background="#FFFFFF" />
+        android:layout_marginEnd="26dp"
+        android:layout_marginRight="26dp"
+        android:background="green" />
+
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -20,14 +24,16 @@
         android:padding="5dp"
         android:hint="Enter book title"
         android:layout_centerHorizontal="true" />
+
     <Button
+        android:id="@+id/readingListButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="CREATE READING LIST"
-        android:id="@+id/readingListButton"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:background="@color/colorAccent"
-        android:textSize="20sp"
-        android:textColor="@color/colorTextIcons" />
+        android:fontFamily="@font/faster_one"
+        android:text="CREATE READING LIST"
+        android:textColor="@color/colorTextIcons"
+        android:textSize="20sp" />
 </RelativeLayout>
