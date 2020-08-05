@@ -15,7 +15,7 @@
         android:text="BOOKHUB"
         android:layout_marginTop="35dp"
         android:id="@+id/appNameTextView"
-        android:textColor="@color/colorTextIcons"
+        android:textColor="@color/colorPrimaryLight"
         android:textSize="40sp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
@@ -27,7 +27,7 @@
         android:id="@+id/libraryButton"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:background="@color/colorAccent"
+        android:background="@color/colorPrimary"
         android:textSize="30sp"
-        android:textColor="@color/colorTextIcons" />
+        android:textColor="@color/colorAccent" />
 </RelativeLayout>
