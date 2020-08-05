@@ -29,6 +29,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:background="@color/colorPrimary"
+        android:fontFamily="@font/faster_one"
         android:text="LIBRARY"
         android:textColor="@color/colorAccent"
         android:textSize="30sp" />
