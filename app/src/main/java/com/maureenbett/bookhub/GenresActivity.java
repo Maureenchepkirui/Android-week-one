@@ -31,7 +31,7 @@ public class GenresActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_genres);
         ButterKnife.bind(this);
-        ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, genres);
+        ArrayAdapter adapter = new ArrayAdapter(this,R.layout.row, genres);
         mListView.setAdapter(adapter);
         Intent intent = getIntent();
         mreadingListButton = (Button) findViewById(R.id.readingListButton);
