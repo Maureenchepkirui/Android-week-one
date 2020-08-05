@@ -10,9 +10,13 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 public class libraryActivity extends AppCompatActivity {
-    private Button mGenresButton;
-    private ListView mListView;
+    @BindView(R.id.genresButton) Button mGenresButton;
+    @BindView(R.id.listView) ListView mListView;
+
     public String[] novels = new String[] {"Jane Eyre","Wuthering Heights","Moby Dick","Pride and Prejudice","The Great Gatsby ","Frankenstein","Robison Crusoe","Little Women","Crime and Punishment","The Notebook","The Next Always","The Kiss","The Sweetest Thing ","A Second Chance","Mi Mero Mole", "Mother's Bistro",
             "Life of Pie", "Screen Door", "Luc Lac", "Sweet Basil",
             "Slappy Cakes", "Equinox", "Miss Delta's", "Andina",
@@ -24,7 +28,7 @@ public class libraryActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_library);
 
-        mListView = (ListView) findViewById(R.id.listView);
+        ButterKnife.bind(this);
 
         ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, novels);
         mListView.setAdapter(adapter);

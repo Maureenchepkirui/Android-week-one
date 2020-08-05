@@ -12,11 +12,14 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 public class GenresActivity extends AppCompatActivity {
     public static final String TAG = MainActivity.class.getSimpleName();
-    private Button mreadingListButton;
-    private ListView mListView;
-    private EditText mLocationEditText;
+    @BindView(R.id.readingListButton) Button mreadingListButton;
+    @BindView (R.id.listView) ListView mListView;
+    @BindView (R.id.locationEditText) EditText mLocationEditText;
     public String[] genres = new String[]{"classic","crime","epic","fable","fairytale","folktale","gothic fiction",
             "historical fiction","horror","thriller","romance","action","humor","legend","magical realism","meta fiction","mythology",
     "mystery","mythopoeia","realistic fiction","romance","satire","science fiction","short story","spy fiction","superhero fiction",
@@ -26,9 +29,7 @@ public class GenresActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_genres);
-        mLocationEditText = (EditText) findViewById(R.id.locationEditText);
-        ListView mListView = (ListView) findViewById(R.id.listView);
-
+        ButterKnife.bind(this);
         ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, genres);
         mListView.setAdapter(adapter);
         Intent intent = getIntent();
