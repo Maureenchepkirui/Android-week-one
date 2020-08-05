@@ -2,9 +2,9 @@
 ````bash
 An application that allows users to view all available novels and create their own custom reading list.Users can also rate books and see the reviews available.
 ````
-## SCREENSHOTS
+## SCREENSHOT
 
-![](screen1.jpeg)
+![](screen1.jpeg) ![](screen2.jpeg) ![](screen3.jpeg)
 
 ## AUTHOR
 ````bash
@@ -35,5 +35,6 @@ Markdown
 For further clarification and inquiries reach out to me at maureenchepkirui005@gmail.com/0717452789
 ````
 ### License
+
 *MIT*
 Copyright (c) 2020 **Maureen Chepkirui**
