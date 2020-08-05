@@ -21,14 +21,15 @@
         android:textColor="@color/colorPrimaryLight"
         android:textSize="30sp"
         android:textStyle="bold" />
+
     <Button
+        android:id="@+id/libraryButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="LIBRARY"
-        android:id="@+id/libraryButton"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:background="@color/colorPrimary"
-        android:textSize="30sp"
-        android:textColor="@color/colorAccent" />
+        android:text="LIBRARY"
+        android:textColor="@color/colorAccent"
+        android:textSize="30sp" />
 </RelativeLayout>
