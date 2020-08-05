@@ -10,6 +10,16 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:background="#FFFFFF" />
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/locationEditText"
+        android:background="@color/colorTextIcons"
+        android:layout_above="@+id/readingListButton"
+        android:layout_marginBottom="10dp"
+        android:padding="5dp"
+        android:hint="Enter book title"
+        android:layout_centerHorizontal="true" />
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
