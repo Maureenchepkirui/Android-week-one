@@ -4,7 +4,7 @@ An application that allows users to view all available novels and create their o
 ````
 ## SCREENSHOT
 
-![](screen1.jpeg) ![](screen2.jpeg) ![](screen3.jpeg)
+![](screen1.jpeg)
 
 ## AUTHOR
 ````bash
