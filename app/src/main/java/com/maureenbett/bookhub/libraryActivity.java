@@ -4,12 +4,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 
 public class libraryActivity extends AppCompatActivity {
-
+    private Button mGenresButton;
     private ListView mListView;
     public String[] novels = new String[] {"Jane Eyre","Wuthering Heights","Moby Dick","Pride and Prejudice","The Great Gatsby ","Frankenstein","Robison Crusoe","Little Women","Crime and Punishment","The Notebook","The Next Always","The Kiss","The Sweetest Thing ","A Second Chance","Mi Mero Mole", "Mother's Bistro",
             "Life of Pie", "Screen Door", "Luc Lac", "Sweet Basil",
@@ -28,8 +30,16 @@ public class libraryActivity extends AppCompatActivity {
         mListView.setAdapter(adapter);
 
         Intent intent = getIntent();
+        mGenresButton = (Button) findViewById(R.id.genresButton);
+        mGenresButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(libraryActivity.this, GenresActivity.class);
+                startActivity(intent);
+            }
+        });
+    }
 
 
 
     }
-}

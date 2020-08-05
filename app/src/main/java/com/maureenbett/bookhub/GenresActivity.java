@@ -9,6 +9,7 @@ public class GenresActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_genres2);
+        setContentView(R.layout.activity_genres);
+
     }
 }
