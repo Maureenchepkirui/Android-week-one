@@ -24,7 +24,9 @@ public class libraryActivity extends AppCompatActivity {
             "Slappy Cakes", "Equinox", "Miss Delta's", "Andina",
             "Lardo", "Portland City Grill", "Fat Head's Brewery",
             "Chipotle", "Subway"};
-
+    public String[] authors = new String[] {"John Doe","Mark Bloom","Zacklier","David Brune","Ritchie","Peter Alpha",
+    "Sally Bitoe","Maureeenec","Leo Noemann","Taabue Nim","Innocent Xaviour","Abisai Aoleon","Quoeen Masha","Tahera Tataya",
+    "Reeskie Greysea","Nyanda Lovelace","Rita Hilda","Abbott","Francis Imbuga","Margaret Ogolla","Tinder","Rodgee","Laurenzio","Alfredo","Lucky Alfred","Ada Adobeiu","Samira Ali","Amiliteo Rebbecca","Clara Lovelace","Lurenzio"};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,7 +34,7 @@ public class libraryActivity extends AppCompatActivity {
 
         ButterKnife.bind(this);
 
-        ArrayAdapter adapter = new ArrayAdapter(this, R.layout.row2, novels);
+        BookhubArrayAdapter adapter = new BookhubArrayAdapter(this, R.layout.row2, novels,authors);
         mListView.setAdapter(adapter);
 
         mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {

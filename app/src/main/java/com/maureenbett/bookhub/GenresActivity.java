@@ -7,10 +7,12 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import butterknife.BindView;
@@ -33,6 +35,14 @@ public class GenresActivity extends AppCompatActivity {
         ButterKnife.bind(this);
         ArrayAdapter adapter = new ArrayAdapter(this,R.layout.row, genres);
         mListView.setAdapter(adapter);
+        mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                String genre = ((TextView)view).getText().toString();
+                Toast.makeText(GenresActivity.this, genre, Toast.LENGTH_LONG).show();
+            }
+        });
+
         Intent intent = getIntent();
         mreadingListButton = (Button) findViewById(R.id.readingListButton);
         mreadingListButton.setOnClickListener(new View.OnClickListener() {
