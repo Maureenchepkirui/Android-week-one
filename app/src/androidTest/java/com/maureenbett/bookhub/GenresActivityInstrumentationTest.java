@@ -19,20 +19,20 @@ import static androidx.test.espresso.matcher.ViewMatchers.withText;
 
 @RunWith(AndroidJUnit4.class)
 @LargeTest
-public class MainActivityInstrumentationTest {
+public class GenresActivityInstrumentationTest {
 
     @Rule
-    public ActivityTestRule<MainActivity> activityTestRule =
-            new ActivityTestRule<>(MainActivity.class);
+    public ActivityTestRule<GenresActivity> activityTestRule =
+            new ActivityTestRule<>(GenresActivity.class);
     @Test
     public void validateEditText() {
-        onView(withId(R.id.novelEditText)).perform(typeText("Portland"))
-                .check(matches(withText("Love Pie")));
+        onView(withId(R.id.novelEditText)).perform(typeText("Hate"))
+                .check(matches(withText("Hate")));
     }
     @Test
-    public void locationIsSentToRestaurantsActivity(){
-        String location = "Love Pie";
-        onView(withId(R.id.novelEditText)).perform(typeText(location)).perform(closeSoftKeyboard());
+    public void novelIsSentToGenresActivity(){
+        String novel = "Hate";
+        onView(withId(R.id.novelEditText)).perform(typeText(novel)).perform(closeSoftKeyboard());
         try {                             // the sleep method requires to be checked and handled so we use try block
             Thread.sleep(250);
         } catch (InterruptedException e){
@@ -40,7 +40,7 @@ public class MainActivityInstrumentationTest {
         }
         onView(withId(R.id.readingListButton)).perform(click());
         onView(withId(R.id.novelTextView)).check(matches
-                (withText(location +" has been added to your custom reading list")));
+                (withText(novel +" has been added to your custom reading list")));
     }
 
 }
