@@ -5,10 +5,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -32,6 +34,15 @@ public class libraryActivity extends AppCompatActivity {
 
         ArrayAdapter adapter = new ArrayAdapter(this, R.layout.row2, novels);
         mListView.setAdapter(adapter);
+
+        mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                String novel = ((TextView)view).getText().toString();
+                Toast.makeText(libraryActivity.this, novel, Toast.LENGTH_LONG).show();
+            }
+        });
+
 
         Intent intent = getIntent();
         mGenresButton = (Button) findViewById(R.id.genresButton);
