@@ -7,16 +7,16 @@ import android.os.Bundle;
 import android.widget.TextView;
 
 public class ReadingListActivity extends AppCompatActivity {
-    private TextView mLocationTextView;
+    private TextView mNovelTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_reading_list);
-        mLocationTextView = (TextView) findViewById(R.id.locationTextView);
+        mNovelTextView = (TextView) findViewById(R.id.novelTextView);
         Intent intent = getIntent();
-        String location = intent.getStringExtra("location");
-        mLocationTextView.setText(location +" has been added to your custom reading list");
+        String novel = intent.getStringExtra("novel");
+        mNovelTextView.setText(novel +" has been added to your custom reading list");
 
 
     }

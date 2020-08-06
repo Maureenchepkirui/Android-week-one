@@ -22,7 +22,7 @@ public class GenresActivity extends AppCompatActivity {
     public static final String TAG = MainActivity.class.getSimpleName();
     @BindView(R.id.readingListButton) Button mreadingListButton;
     @BindView (R.id.listView) ListView mListView;
-    @BindView (R.id.locationEditText) EditText mLocationEditText;
+    @BindView (R.id.novelEditText) EditText mNovelEditText;
     public String[] genres = new String[]{"classic","crime","epic","fable","fairytale","folktale","gothic fiction",
             "historical fiction","horror","thriller","romance","action","humor","legend","magical realism","meta fiction","mythology",
     "mystery","mythopoeia","realistic fiction","romance","satire","science fiction","short story","spy fiction","superhero fiction",
@@ -48,9 +48,9 @@ public class GenresActivity extends AppCompatActivity {
         mreadingListButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                    String location = mLocationEditText.getText().toString();
+                    String novel = mNovelEditText.getText().toString();
                     Intent intent = new Intent(GenresActivity.this, ReadingListActivity.class);
-                    intent.putExtra("location", location);
+                    intent.putExtra("novel", novel);
                     startActivity(intent);
                 }
             });
